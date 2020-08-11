@@ -14,12 +14,12 @@ const Embed = ({
   data,
   className = '',
   rel = 'noreferer nofollower external',
-  sandbox = '',
+  sandbox,
 }: {
   data: EmbedBlockData;
   className?: string;
   rel?: string;
-  sandbox?: string;
+  sandbox?: string | null;
 }) => {
   const classNames: string[] = [];
   if (className) classNames.push(className);
@@ -41,10 +41,14 @@ const Embed = ({
     figureprops.height = data.height.toString();
   }
 
+  if (sandbox) {
+    figureprops.sandbox = sandbox.toString();
+  }
+
   return (
     <figure>
       {data.embed ? (
-        <iframe src={data.embed} {...figureprops} frameBorder="0" sandbox={sandbox} data-src={data.source}></iframe>
+        <iframe src={data.embed} {...figureprops} frameBorder="0" data-src={data.source}></iframe>
       ) : (
         <a href={data.source} target="_blank" rel={rel}>
           {data.source}

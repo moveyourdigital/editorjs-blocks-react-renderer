@@ -7,7 +7,6 @@ exports[`<Embed /> when receives a Embed block with actions renders a <figure> b
     data-src="https://www.youtube.com/watch?v=yDiD8F9ItX0"
     frameBorder="0"
     height="320"
-    sandbox=""
     src="https://www.youtube.com/embed/yDiD8F9ItX0"
     width="580"
   />
