@@ -5,14 +5,18 @@ export interface CodeBlockData {
   lang?: string;
 }
 
-const Code = ({ data }: { data: CodeBlockData }) => {
-  const codeprops: {
+const Code = ({ data, className = '' }: { data: CodeBlockData; className?: string }) => {
+  const props: {
     [s: string]: string;
   } = {};
 
-  if (data?.lang) codeprops.lang = data.lang;
+  if (className) {
+    props.className = className;
+  }
 
-  return <pre>{data?.code && <code {...codeprops}>{`${data.code}`}</code>}</pre>;
+  if (data?.lang) props.lang = data.lang;
+
+  return <pre>{data?.code && <code {...props}>{`${data.code}`}</code>}</pre>;
 };
 
 export default Code;
