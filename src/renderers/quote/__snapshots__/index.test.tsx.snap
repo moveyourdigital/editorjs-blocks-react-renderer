@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Quote /> when receives a Quote block renders a <blockquote> block with text and <footer> 1`] = `
+<blockquote
+  className="text-align-center special-quote"
+>
+  <p>
+    Esse ea consectetur est fugiat ut dolor pariatur ex voluptate ad Lorem Lorem sit sunt.
+  </p>
+  <p>
+    Eiusmod voluptate ullamco laborum minim elit.
+  </p>
+  <p>
+    Cillum ullamco fugiat tempor dolore enim.
+    <br />
+    Excepteur exercitation amet aliqua proident labore qui sint do dolore sint nulla aute.
+  </p>
+  <footer>
+    Carpe Diem, 
+    <cite>
+      Lorem ipusm dolor
+    </cite>
+    .
+  </footer>
+</blockquote>
+`;

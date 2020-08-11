@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Paragraph /> when receives a paragraph block renders a <p> tag 1`] = `
+<p>
+  Hey. Meet the new Editor. On this page you can see it in action — try to edit this text. Source code of the page contains the example of connection and configuration.
+</p>
+`;

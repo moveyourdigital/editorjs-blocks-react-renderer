@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Embed /> when receives a Embed block with actions renders a <figure> block with <iframe> and <figcaption> 1`] = `
+<figure>
+  <iframe
+    className="special-embed embed-block-service-youtube"
+    data-src="https://www.youtube.com/watch?v=yDiD8F9ItX0"
+    frameBorder="0"
+    height="320"
+    sandbox=""
+    src="https://www.youtube.com/embed/yDiD8F9ItX0"
+    width="580"
+  />
+  <figcaption>
+    Deep in the Universe
+  </figcaption>
+</figure>
+`;

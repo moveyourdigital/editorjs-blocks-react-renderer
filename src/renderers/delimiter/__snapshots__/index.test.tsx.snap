@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Delimiter /> when receives a Delimiter block renders a <hr /> tag 1`] = `
+<hr
+  className="paragraph-delimiter"
+/>
+`;

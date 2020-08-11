@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Code /> when receives a code block renders a <pre> tag with <code> 1`] = `
+<pre>
+  <code
+    lang="text/html"
+  >
+    body {
+ font-size: 14px;
+ line-height: 16px;
+}
+  </code>
+</pre>
+`;

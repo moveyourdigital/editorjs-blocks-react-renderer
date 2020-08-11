@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> when receives an header level 2 block renders a <h2> tag 1`] = `
+<h2>
+  Editor.js
+</h2>
+`;
