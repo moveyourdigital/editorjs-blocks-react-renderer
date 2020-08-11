@@ -6,10 +6,18 @@ export interface ListBlockData {
   items: string[];
 }
 
-const List = ({ data }: { data: ListBlockData }) => {
+const List = ({ data, className = '' }: { data: ListBlockData; className?: string }) => {
+  const props: {
+    [s: string]: string;
+  } = {};
+
+  if (className) {
+    props.className = className;
+  }
+
   const Tag = (data?.style === 'ordered' ? `ol` : `ul`) as keyof JSX.IntrinsicElements;
   return (
-    <Tag>
+    <Tag {...props}>
       {data?.items.map((item, i) => (
         <li key={i}>{ReactHtmlParser(item)}</li>
       ))}

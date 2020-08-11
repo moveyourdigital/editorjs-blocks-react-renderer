@@ -6,9 +6,17 @@ export interface HeaderBlockData {
   level: number;
 }
 
-const Header = ({ data }: { data: HeaderBlockData }) => {
+const Header = ({ data, className = '' }: { data: HeaderBlockData; className?: string }) => {
+  const props: {
+    [s: string]: string;
+  } = {};
+
+  if (className) {
+    props.className = className;
+  }
+
   const Tag = `h${data.level || 1}` as keyof JSX.IntrinsicElements;
-  return <Tag>{data?.text && ReactHtmlParser(data.text)}</Tag>;
+  return <Tag {...props}>{data?.text && ReactHtmlParser(data.text)}</Tag>;
 };
 
 export default Header;

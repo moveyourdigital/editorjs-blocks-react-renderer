@@ -5,8 +5,16 @@ export interface ParagraphBlockData {
   text: string;
 }
 
-const Paragraph = ({ data }: { data: ParagraphBlockData }) => {
-  return <p>{data?.text && ReactHtmlParser(data.text)}</p>;
+const Paragraph = ({ data, className = '' }: { data: ParagraphBlockData; className?: string }) => {
+  const props: {
+    [s: string]: string;
+  } = {};
+
+  if (className) {
+    props.className = className;
+  }
+
+  return <p {...props}>{data?.text && ReactHtmlParser(data.text)}</p>;
 };
 
 export default Paragraph;
