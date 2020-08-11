@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> when receives a list ordered block renders a <ol> block 1`] = `
+<ol>
+  <li>
+    It is a block-styled editor
+  </li>
+  <li>
+    It returns clean data output in JSON
+  </li>
+  <li>
+    Designed to be extendable and pluggable with a simple API
+  </li>
+</ol>
+`;
+
+exports[`<List /> when receives a list unordered block renders a <ul> block 1`] = `
+<ul>
+  <li>
+    It is a block-styled editor
+  </li>
+  <li>
+    It returns clean data output in JSON
+  </li>
+  <li>
+    Designed to be extendable and pluggable with a simple API
+  </li>
+</ul>
+`;

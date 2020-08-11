@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Table /> when receives a table block renders a <table> tag 1`] = `
+<table>
+  <caption>
+    The stock on our store.
+  </caption>
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Qtd
+      </th>
+      <th>
+        Price
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+        Kine
+      </th>
+      <td>
+        1 pcs
+      </td>
+      <td>
+        100$
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Pigs
+      </th>
+      <td>
+        3 pcs
+      </td>
+      <td>
+        200$
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Chickens
+      </th>
+      <td>
+        12 pcs
+      </td>
+      <td>
+        150$
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Qtd
+      </th>
+      <th>
+        Price
+      </th>
+    </tr>
+  </tfoot>
+</table>
+`;
