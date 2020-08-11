@@ -70,20 +70,13 @@ However, each renderer supports a set of props, including `className` which can 
     className: "article-hr"
   },
   embed: {
-    className: "styled-iframe",
-    rel: "nofollower",
-    sandbox: "allow-fullscreen"
+    className: "styled-iframe"
   }
   header: {
     className: "lead"
   },
   image: {
-    className: "img-fluid",
-    actionsClassNames: {
-      stretched: 'image-block--stretched',
-      withBorder: 'image-block--with-border',
-      withBackground: 'image-block--with-background',
-    }
+    className: "img-fluid"
   },
   list: {
     className: "unstyled-list"
@@ -92,10 +85,7 @@ However, each renderer supports a set of props, including `className` which can 
     className: "lead"
   },
   quote: {
-    className: "block-quote",
-    actionsClassNames: {
-    alignment: 'text-align-{alignment}', // This is a substitution placeholder: left or center.
-  }
+    className: "block-quote"
   },
   table: {
     className: "table"
@@ -103,7 +93,49 @@ However, each renderer supports a set of props, including `className` which can 
 }} />
 ```
 
-Above you have all allowed properties for each renderer.
+Below are the defaults for each renderer:
+
+```js
+const defaultConfigs = {
+  code: {
+    className: ""
+  },
+  delimiter: {
+    className: ""
+  },
+  embed: {
+    className: "styled-iframe",
+    rel: "noreferer nofollower external", // Generates an <a> if not able to receive an "embed" property
+    sandbox: undefined
+  }
+  header: {
+    className: ""
+  },
+  image: {
+    className: "",
+    actionsClassNames: {
+      stretched: "image-block--stretched",
+      withBorder: "image-block--with-border",
+      withBackground: "image-block--with-background",
+    }
+  },
+  list: {
+    className: ""
+  },
+  paragraph: {
+    className: ""
+  },
+  quote: {
+    className: "",
+    actionsClassNames: {
+      alignment: "text-align-{alignment}", // This is a substitution placeholder: left or center.
+    }
+  },
+  table: {
+    className: "table"
+  }
+}
+```
 
 So, in theory, any CSS framework (such as Bootstrap) can work seamlessly with this library as long as you pass the correct properties.
 
@@ -136,6 +168,11 @@ export default () => <Blocks data={dataFromEditor} renderers={{
   checklist: Checklist
 }} />
 ```
+
+## Security optimization
+
+For `embed` block, you can pass a string of Feature-Policy directives for `sandbox` to optimize for security. Take into account that services such as YouTube won't work properly if you set those settings.
+
 
 ## Inspiration
 
