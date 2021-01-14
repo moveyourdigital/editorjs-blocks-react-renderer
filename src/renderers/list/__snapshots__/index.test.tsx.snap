@@ -20,7 +20,11 @@ exports[`<List /> when receives a list unordered block renders a <ul> block 1`] 
     It is a block-styled editor
   </li>
   <li>
-    It returns clean data output in JSON
+    It returns clean 
+    <b>
+      data output
+    </b>
+     in JSON
   </li>
   <li>
     Designed to be extendable and pluggable with a simple API

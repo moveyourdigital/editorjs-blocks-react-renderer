@@ -6,7 +6,7 @@ describe('<Paragraph />', () => {
   describe('when receives a paragraph block', () => {
     const data: ParagraphBlockData = {
       text:
-        'Hey. Meet the new Editor. On this page you can see it in action — try to edit this text. Source code of the page contains the example of connection and configuration.',
+        'Hey. Meet the new <b>Editor</b>. On this page you can see it in action — try to edit this text. Source code of the page contains the example of connection and configuration.',
     };
 
     it('renders a <p> tag', () => {

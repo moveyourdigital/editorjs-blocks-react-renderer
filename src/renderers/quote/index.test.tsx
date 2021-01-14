@@ -6,7 +6,7 @@ describe('<Quote />', () => {
   describe('when receives a Quote block', () => {
     const data: QuoteBlockData = {
       text:
-        'Esse ea consectetur est fugiat ut dolor pariatur ex voluptate ad Lorem Lorem sit sunt.\n\nEiusmod voluptate ullamco laborum minim elit.\n\nCillum ullamco fugiat tempor dolore enim.\nExcepteur exercitation amet aliqua proident labore qui sint do dolore sint nulla aute.',
+        '<i>Esse ea consectetur est fugiat ut dolor pariatur ex voluptate ad Lorem Lorem sit sunt.</i>\n\n<i>Eiusmod voluptate <b>ullamco</b> laborum minim elit.</i><i><br></i>Cillum ullamco fugiat tempor dolore enim.\nExcepteur exercitation amet aliqua proident labore qui sint do dolore sint nulla aute.</i>',
       caption: 'Carpe Diem, <cite>Lorem ipusm dolor</cite>.',
       alignment: 'center',
     };
