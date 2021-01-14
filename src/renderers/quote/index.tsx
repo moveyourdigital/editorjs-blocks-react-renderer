@@ -39,13 +39,13 @@ const Quote = ({
   return (
     <blockquote {...blockquoteprops}>
       {data.text &&
-        data.text.split('\n\n').map((paragraph, i) => (
-          <p key={i}>
-            {ReactHtmlParser(paragraph
-              .split('\n')
-              .reduce((total, line) => [total, '<br />', line].join('')))}
-          </p>
-        ))}
+        data.text
+          .split('\n\n')
+          .map((paragraph, i) => (
+            <p key={i}>
+              {ReactHtmlParser(paragraph.split('\n').reduce((total, line) => [total, '<br />', line].join('')))}
+            </p>
+          ))}
       {data.caption && <footer>{ReactHtmlParser(data.caption)}</footer>}
     </blockquote>
   );
