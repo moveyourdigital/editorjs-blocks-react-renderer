@@ -8,7 +8,7 @@ describe('<List />', () => {
       style: 'unordered',
       items: [
         'It is a block-styled editor',
-        'It returns clean data output in JSON',
+        'It returns clean <b>data output</b> in JSON',
         'Designed to be extendable and pluggable with a simple API',
       ],
     };
