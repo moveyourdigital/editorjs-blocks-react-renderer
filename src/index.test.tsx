@@ -5,7 +5,7 @@ import Blocks, { DataProp } from '.';
 describe('<Block />', () => {
   describe('when receives an EditorJS blocks data', () => {
     const data: DataProp = {
-      time: 1597100797491,
+      time: 1610632160642,
       blocks: [
         {
           type: 'paragraph',
@@ -74,6 +74,10 @@ describe('<Block />', () => {
           },
         },
         {
+          type: 'delimiter',
+          data: {},
+        },
+        {
           type: 'list',
           data: {
             style: 'ordered',
@@ -112,7 +116,7 @@ describe('<Block />', () => {
           },
         },
       ],
-      version: '2.18.0',
+      version: '2.19.0',
     };
 
     it('renders all known block tags', () => {
