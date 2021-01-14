@@ -1,6 +1,6 @@
 {
   "name": "editorjs-blocks-react-renderer",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "EditorJS blocks renderer to semanticly beautiful html5 tags via React.",
   "keywords": [
     "editorjs",
