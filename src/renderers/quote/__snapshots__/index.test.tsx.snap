@@ -5,12 +5,21 @@ exports[`<Quote /> when receives a Quote block renders a <blockquote> block with
   className="text-align-center special-quote"
 >
   <p>
-    Esse ea consectetur est fugiat ut dolor pariatur ex voluptate ad Lorem Lorem sit sunt.
+    <i>
+      Esse ea consectetur est fugiat ut dolor pariatur ex voluptate ad Lorem Lorem sit sunt.
+    </i>
   </p>
   <p>
-    Eiusmod voluptate ullamco laborum minim elit.
-  </p>
-  <p>
+    <i>
+      Eiusmod voluptate 
+      <b>
+        ullamco
+      </b>
+       laborum minim elit.
+    </i>
+    <i>
+      <br />
+    </i>
     Cillum ullamco fugiat tempor dolore enim.
     <br />
     Excepteur exercitation amet aliqua proident labore qui sint do dolore sint nulla aute.

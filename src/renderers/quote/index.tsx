@@ -41,10 +41,9 @@ const Quote = ({
       {data.text &&
         data.text.split('\n\n').map((paragraph, i) => (
           <p key={i}>
-            {paragraph
+            {ReactHtmlParser(paragraph
               .split('\n')
-              // @ts-ignore
-              .reduce((total, line, j) => [total, <br key={j} />, line])}
+              .reduce((total, line) => [total, '<br />', line].join('')))}
           </p>
         ))}
       {data.caption && <footer>{ReactHtmlParser(data.caption)}</footer>}
