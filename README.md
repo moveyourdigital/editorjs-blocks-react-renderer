@@ -71,7 +71,7 @@ However, each renderer supports a set of props, including `className` which can 
   },
   embed: {
     className: "styled-iframe"
-  }
+  },
   header: {
     className: "lead"
   },
