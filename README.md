@@ -107,7 +107,7 @@ const defaultConfigs = {
     className: "styled-iframe",
     rel: "noreferer nofollower external", // Generates an <a> if not able to receive an "embed" property
     sandbox: undefined
-  }
+  },
   header: {
     className: ""
   },
