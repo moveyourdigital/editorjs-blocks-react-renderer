@@ -47,6 +47,7 @@ const Blocks = ({
     embed: Embed,
     header: Header,
     image: Image,
+    simpleImage: Image,
     list: List,
     paragraph: Paragraph,
     quote: Quote,
