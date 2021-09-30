@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
+import HTMLReactParser from 'html-react-parser';
 
 export interface QuoteBlockData {
   text: string;
@@ -43,10 +43,10 @@ const Quote = ({
           .split('\n\n')
           .map((paragraph, i) => (
             <p key={i}>
-              {ReactHtmlParser(paragraph.split('\n').reduce((total, line) => [total, '<br />', line].join('')))}
+              {HTMLReactParser(paragraph.split('\n').reduce((total, line) => [total, '<br />', line].join('')))}
             </p>
           ))}
-      {data.caption && <footer>{ReactHtmlParser(data.caption)}</footer>}
+      {data.caption && <footer>{HTMLReactParser(data.caption)}</footer>}
     </blockquote>
   );
 };

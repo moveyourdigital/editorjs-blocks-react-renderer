@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
+import HTMLReactParser from 'html-react-parser';
 
 export interface HeaderBlockData {
   text: string;
@@ -16,7 +16,7 @@ const Header = ({ data, className = '' }: { data: HeaderBlockData; className?: s
   }
 
   const Tag = `h${data.level || 1}` as keyof JSX.IntrinsicElements;
-  return <Tag {...props}>{data?.text && ReactHtmlParser(data.text)}</Tag>;
+  return <Tag {...props}>{data?.text && HTMLReactParser(data.text)}</Tag>;
 };
 
 export default Header;

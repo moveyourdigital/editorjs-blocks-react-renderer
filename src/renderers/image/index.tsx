@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
+import HTMLReactParser from 'html-react-parser';
 
 export interface ImageBlockData {
   file: {
@@ -49,7 +49,7 @@ const Image = ({
   return (
     <figure {...figureprops}>
       {data?.file?.url && <img src={data.file.url} alt={data.caption || data.file.name} />}
-      {data.caption && <figcaption>{ReactHtmlParser(data.caption)}</figcaption>}
+      {data.caption && <figcaption>{HTMLReactParser(data.caption)}</figcaption>}
     </figure>
   );
 };

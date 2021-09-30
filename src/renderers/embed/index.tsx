@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
+import HTMLReactParser from 'html-react-parser';
 
 export interface EmbedBlockData {
   service: string;
@@ -54,7 +54,7 @@ const Embed = ({
           {data.source}
         </a>
       )}
-      {data.caption && <figcaption>{ReactHtmlParser(data.caption)}</figcaption>}
+      {data.caption && <figcaption>{HTMLReactParser(data.caption)}</figcaption>}
     </figure>
   );
 };
