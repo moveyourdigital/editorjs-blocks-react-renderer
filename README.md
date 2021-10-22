@@ -156,7 +156,7 @@ const Checklist = ({
       {data?.items.map((item, i) => (
         <p key={i}>
           <label>
-            <input type="checkbox" /> {ReactHtmlParser(item)}
+            <input type="checkbox" /> {HTMLReactParser(item)}
           </label>
         </p>
       ))}

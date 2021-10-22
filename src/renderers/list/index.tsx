@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
+import HTMLReactParser from 'html-react-parser';
 
 export interface ListBlockData {
   style: 'ordered' | 'unordered';
@@ -19,7 +19,7 @@ const List = ({ data, className = '' }: { data: ListBlockData; className?: strin
   return (
     <Tag {...props}>
       {data?.items.map((item, i) => (
-        <li key={i}>{ReactHtmlParser(item)}</li>
+        <li key={i}>{HTMLReactParser(item)}</li>
       ))}
     </Tag>
   );
