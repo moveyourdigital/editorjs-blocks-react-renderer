@@ -142,9 +142,9 @@ describe('<Block />', () => {
 
     const config: ConfigProp = {
       paragraph: {
-        className: "lead"
+        className: 'lead',
       },
-    }
+    };
 
     it('only applies className to specified block', () => {
       expect(create(<Blocks data={data} config={config} />).toJSON()).toMatchSnapshot();
@@ -181,44 +181,32 @@ describe('<Block />', () => {
 
     it('uses the provided renderer for the specified block', () => {
       const CustomRenderCode: RenderFn<{
-        code: string | number
-        lang: "text/javascript" | "text/typescript"
+        code: string | number;
+        lang: 'text/javascript' | 'text/typescript';
       }> = ({ data: d, className }) => (
         <div>
-          <pre>
-            {d?.code && (
-              <code lang={d.lang} className={className}>{`${d.code}`}</code>
-            )}
-          </pre>
+          <pre>{d?.code && <code lang={d.lang} className={className}>{`${d.code}`}</code>}</pre>
           <p>Warning: do not run this code in production</p>
         </div>
-      )
+      );
 
       const renderers: RenderersProp = {
         code: CustomRenderCode,
-      }
+      };
 
       expect(create(<Blocks data={data} renderers={renderers} />).toJSON()).toMatchSnapshot();
     });
 
     it('must maintan backward compatibility with 0.1.x format', () => {
-      const CustomRenderHeader = ({
-        data: d,
-        className,
-      }: {
-        data: { [s: string]: any },
-        className?: string
-      }) => {
+      const CustomRenderHeader = ({ data: d, className }: { data: { [s: string]: any }; className?: string }) => {
         const Tag = `h${d?.level || 1}` as keyof JSX.IntrinsicElements;
 
-        return (
-          <Tag className={className}>{d.text}</Tag>
-        )
-      }
+        return <Tag className={className}>{d.text}</Tag>;
+      };
 
       const renderers: RenderersProp = {
         header: CustomRenderHeader,
-      }
+      };
 
       expect(create(<Blocks data={data} renderers={renderers} />).toJSON()).toMatchSnapshot();
     });

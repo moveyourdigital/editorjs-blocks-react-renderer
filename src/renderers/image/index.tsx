@@ -17,7 +17,7 @@ export interface ImageBlockData {
 export interface ImageBlockConfig {
   actionsClassNames?: {
     [s: string]: string;
-  }
+  };
 }
 
 const Image: RenderFn<ImageBlockData, ImageBlockConfig> = ({
