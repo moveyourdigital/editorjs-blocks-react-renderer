@@ -11,7 +11,7 @@ export interface QuoteBlockData {
 export interface QuoteBlockConfig {
   actionsClassNames?: {
     [s: string]: string;
-  }
+  };
 }
 
 const Quote: RenderFn<QuoteBlockData, QuoteBlockConfig> = ({

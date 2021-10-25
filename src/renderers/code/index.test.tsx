@@ -21,7 +21,7 @@ describe('<Code />', () => {
     };
 
     it('renders a <pre> tag with <code className>', () => {
-      expect(create(<Code data={data} className={"code-block"} />).toJSON()).toMatchSnapshot();
+      expect(create(<Code data={data} className={'code-block'} />).toJSON()).toMatchSnapshot();
     });
   });
 

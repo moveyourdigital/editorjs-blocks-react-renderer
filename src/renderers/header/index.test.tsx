@@ -21,7 +21,7 @@ describe('<Header />', () => {
     };
 
     it('renders a <h2 className>', () => {
-      expect(create(<Header data={data} className={"header-block"} />).toJSON()).toMatchSnapshot();
+      expect(create(<Header data={data} className={'header-block'} />).toJSON()).toMatchSnapshot();
     });
   });
 });
