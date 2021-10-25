@@ -33,6 +33,6 @@ The core team is monitoring for pull requests. We will review your pull request 
 1) Fork the repository and create your branch from the correct branch/tag.
 2) Run `npm install` in the repository root.
 3) Add or change tests as needed.
-4) Ensure the test suite passes with `npm test`. Tip: `npm run test:watch` development.
+4) Ensure the test suite passes with `npm test`. Tip: run `npm run test:watch` during development.
 5) Run `npm test -- -u` to update the jest snapshots and commit these changes as well (if there are any updates).
 6) Run `npm run list && npm run format` and commit any changes.
