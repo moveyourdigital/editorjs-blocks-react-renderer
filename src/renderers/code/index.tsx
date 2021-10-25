@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { RenderFn } from '../..';
 
 export interface CodeBlockData {
   code: string;
   lang?: string;
 }
 
-const Code = ({ data, className = '' }: { data: CodeBlockData; className?: string }) => {
+const Code: RenderFn<CodeBlockData> = ({ data, className = '' }) => {
   const props: {
     [s: string]: string;
   } = {};

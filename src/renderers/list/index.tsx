@@ -1,12 +1,13 @@
 import React from 'react';
 import HTMLReactParser from 'html-react-parser';
+import { RenderFn } from '../..';
 
 export interface ListBlockData {
   style: 'ordered' | 'unordered';
   items: string[];
 }
 
-const List = ({ data, className = '' }: { data: ListBlockData; className?: string }) => {
+const List: RenderFn<ListBlockData> = ({ data, className = '' }) => {
   const props: {
     [s: string]: string;
   } = {};

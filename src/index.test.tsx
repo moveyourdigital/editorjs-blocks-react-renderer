@@ -1,6 +1,6 @@
 import React from 'react';
 import { create } from 'react-test-renderer';
-import Blocks, { DataProp } from '.';
+import Blocks, { ConfigProp, DataProp, RenderersProp, RenderFn } from '.';
 
 describe('<Block />', () => {
   describe('when receives an EditorJS blocks data', () => {
@@ -116,6 +116,65 @@ describe('<Block />', () => {
 
     it('renders all known block tags', () => {
       expect(create(<Blocks data={data} />).toJSON()).toMatchSnapshot();
+    });
+  });
+
+  describe('when receives a Renderers object', () => {
+    const data: DataProp = {
+      time: 1610632160642,
+      blocks: [
+        {
+          type: 'paragraph',
+          data: {
+            text: 'Mollit deserunt culpa fugiat ea do laboris minim ex do. Elit cillum qui aute sint irure aliqua excepteur minim. Eiusmod velit cupidatat ea culpa magna magna id consectetur enim irure ex excepteur tempor quis. Veniam incididunt ullamco adipisicing dolor ex proident ex amet dolor. Nisi in adipisicing non quis id Lorem consectetur.',
+          },
+        },
+        {
+          type: 'code',
+          data: {
+            code: 'const foo = new Bar();',
+            lang: 'text/javascript',
+          },
+        },
+      ],
+      version: '2.19.0',
+    };
+
+    const CustomRenderCode: RenderFn<{
+      code: string | number
+      lang: "text/javascript" | "text/typescript"
+    }> = ({ data: d, className }) => (
+      <div>
+        <pre>
+          {d?.code && (
+            <code lang={d.lang} className={className}>{`${d.code}`}</code>
+          )}
+        </pre>
+        <p>Warning: do not run this code in production</p>
+      </div>
+    )
+
+    const CustomRenderHeader = ({
+      data: d,
+      className,
+    }: {
+      data: {[s:string]: any},
+      className?: string
+    }) => (
+      <h1></h1>
+    )
+
+    const renderers: RenderersProp = {
+      code: CustomRenderCode,
+      header: CustomRenderHeader,
+    }
+
+    it('uses the provided renderer for the specified block', () => {
+      expect(create(<Blocks data={data} renderers={renderers} />).toJSON()).toMatchSnapshot();
+    });
+
+    it('must maintan backward compatibility with 0.1.x format', () => {
+      expect(create(<Blocks data={data} renderers={renderers} />).toJSON()).toMatchSnapshot();
     });
   });
 });
