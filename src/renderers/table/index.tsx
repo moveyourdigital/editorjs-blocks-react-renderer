@@ -40,10 +40,10 @@ const Table: RenderFn<TableBlockData> = ({ data, className = '' }) => {
           </tr>
         ))}
       </tbody>
-      {data?.header && (
+      {data?.footer && (
         <tfoot>
           <tr>
-            {data.header.map((cell, i) => (
+            {data?.footer.map((cell, i) => (
               <th key={`${i}`}>{HTMLReactParser(cell)}</th>
             ))}
           </tr>
