@@ -20,12 +20,7 @@
     "test:watch": "jest --watch",
     "format": "prettier --write \"src/**/*.tsx\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint && npm run format",
-    "version:bump": "npm version patch",
-    "version": "git add -A src",
-    "postversion": "git push && git push --tags",
+    "prepublishOnly": "npm run format && npm run lint && npm t && npm run build",
     "update:latest": "npm-check-updates -u"
   },
   "repository": {
