@@ -1,5 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Block /> when receives a Config object with className only applies className to specified block 1`] = `
+Array [
+  <p
+    className="lead"
+  >
+    Mollit deserunt culpa fugiat ea do laboris minim ex do. Elit cillum qui aute sint irure aliqua excepteur minim. Eiusmod velit cupidatat ea culpa magna magna id consectetur enim irure ex excepteur tempor quis. Veniam incididunt ullamco adipisicing dolor ex proident ex amet dolor. Nisi in adipisicing non quis id Lorem consectetur.
+  </p>,
+  <h3>
+    Quis consectetur nostrud eu officia aute laborum labore nulla?
+  </h3>,
+]
+`;
+
+exports[`<Block /> when receives a Renderers object must maintan backward compatibility with 0.1.x format 1`] = `
+Array [
+  <p>
+    Mollit deserunt culpa fugiat ea do laboris minim ex do. Elit cillum qui aute sint irure aliqua excepteur minim. Eiusmod velit cupidatat ea culpa magna magna id consectetur enim irure ex excepteur tempor quis. Veniam incididunt ullamco adipisicing dolor ex proident ex amet dolor. Nisi in adipisicing non quis id Lorem consectetur.
+  </p>,
+  <h2>
+    Do laboris magna quis nisi consequat!
+  </h2>,
+  <pre>
+    <code
+      lang="text/javascript"
+    >
+      const foo = new Bar();
+    </code>
+  </pre>,
+]
+`;
+
+exports[`<Block /> when receives a Renderers object uses the provided renderer for the specified block 1`] = `
+Array [
+  <p>
+    Mollit deserunt culpa fugiat ea do laboris minim ex do. Elit cillum qui aute sint irure aliqua excepteur minim. Eiusmod velit cupidatat ea culpa magna magna id consectetur enim irure ex excepteur tempor quis. Veniam incididunt ullamco adipisicing dolor ex proident ex amet dolor. Nisi in adipisicing non quis id Lorem consectetur.
+  </p>,
+  <h2>
+    Do laboris magna quis nisi consequat!
+  </h2>,
+  <div>
+    <pre>
+      <code
+        lang="text/javascript"
+      >
+        const foo = new Bar();
+      </code>
+    </pre>
+    <p>
+      Warning: do not run this code in production
+    </p>
+  </div>,
+]
+`;
+
 exports[`<Block /> when receives an EditorJS blocks data renders all known block tags 1`] = `
 Array [
   <p>

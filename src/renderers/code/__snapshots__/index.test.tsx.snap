@@ -12,3 +12,28 @@ exports[`<Code /> when receives a code block renders a <pre> tag with <code> 1`]
   </code>
 </pre>
 `;
+
+exports[`<Code /> when receives a code block with className renders a <pre> tag with <code className> 1`] = `
+<pre>
+  <code
+    className="code-block"
+    lang="text/html"
+  >
+    body {
+ font-size: 14px;
+ line-height: 16px;
+}
+  </code>
+</pre>
+`;
+
+exports[`<Code /> when receives a code block without lang renders a <pre> tag with <code> without lang property 1`] = `
+<pre>
+  <code>
+    body {
+ font-size: 14px;
+ line-height: 16px;
+}
+  </code>
+</pre>
+`;

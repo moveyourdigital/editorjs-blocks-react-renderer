@@ -67,33 +67,41 @@ However, each renderer supports a set of props, including `className` which can 
     className: "language-js"
   },
   delimiter: {
-    className: "article-hr"
+    className: "border border-2 w-16 mx-auto"
   },
   embed: {
-    className: "styled-iframe"
+    className: "border-0"
   },
   header: {
-    className: "lead"
+    className: "font-bold"
   },
   image: {
-    className: "img-fluid"
+    className: "w-full max-w-screen-md",
+    actionsClassNames: {
+      stretched: "w-full h-80 object-cover",
+      withBorder: "border border-2",
+      withBackground: "p-2",
+    }
   },
   list: {
-    className: "unstyled-list"
+    className: "list-inside"
   },
   paragraph: {
-    className: "lead"
+    className: "text-base text-opacity-75",
+    actionsClassNames: {
+      alignment: "text-{alignment}", // This is a substitution placeholder: left or center.
+    }
   },
   quote: {
-    className: "block-quote"
+    className: "py-3 px-5 italic font-serif"
   },
   table: {
-    className: "table"
+    className: "table-auto"
   }
 }} />
 ```
 
-Below are the defaults for each renderer:
+The example above uses [TailwindCSS](https://tailwindcss.com/) classes, replacing the default ones, which you can find below:
 
 ```js
 const defaultConfigs = {
@@ -104,7 +112,7 @@ const defaultConfigs = {
     className: ""
   },
   embed: {
-    className: "styled-iframe",
+    className: "",
     rel: "noreferer nofollower external", // Generates an <a> if not able to receive an "embed" property
     sandbox: undefined
   },
@@ -132,12 +140,12 @@ const defaultConfigs = {
     }
   },
   table: {
-    className: "table"
+    className: ""
   }
 }
 ```
 
-So, in theory, any CSS framework (such as Bootstrap) can work seamlessly with this library as long as you pass the correct properties.
+So, in theory, any CSS framework can work seamlessly with this library as long as you pass the correct properties.
 
 ## Custom Renderers
 
