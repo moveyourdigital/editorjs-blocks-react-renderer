@@ -119,6 +119,38 @@ describe('<Block />', () => {
     });
   });
 
+  describe('when receives a Config object with className', () => {
+    const data: DataProp = {
+      time: 1610632160642,
+      blocks: [
+        {
+          type: 'paragraph',
+          data: {
+            text: 'Mollit deserunt culpa fugiat ea do laboris minim ex do. Elit cillum qui aute sint irure aliqua excepteur minim. Eiusmod velit cupidatat ea culpa magna magna id consectetur enim irure ex excepteur tempor quis. Veniam incididunt ullamco adipisicing dolor ex proident ex amet dolor. Nisi in adipisicing non quis id Lorem consectetur.',
+          },
+        },
+        {
+          type: 'header',
+          data: {
+            text: 'Quis consectetur nostrud eu officia aute laborum labore nulla?',
+            level: 3,
+          },
+        },
+      ],
+      version: '2.19.0',
+    };
+
+    const config: ConfigProp = {
+      paragraph: {
+        className: "lead"
+      },
+    }
+
+    it('only applies className to specified block', () => {
+      expect(create(<Blocks data={data} config={config} />).toJSON()).toMatchSnapshot();
+    });
+  });
+
   describe('when receives a Renderers object', () => {
     const data: DataProp = {
       time: 1610632160642,
@@ -127,6 +159,13 @@ describe('<Block />', () => {
           type: 'paragraph',
           data: {
             text: 'Mollit deserunt culpa fugiat ea do laboris minim ex do. Elit cillum qui aute sint irure aliqua excepteur minim. Eiusmod velit cupidatat ea culpa magna magna id consectetur enim irure ex excepteur tempor quis. Veniam incididunt ullamco adipisicing dolor ex proident ex amet dolor. Nisi in adipisicing non quis id Lorem consectetur.',
+          },
+        },
+        {
+          type: 'header',
+          data: {
+            text: 'Do laboris magna quis nisi consequat!',
+            level: 2,
           },
         },
         {
@@ -140,40 +179,47 @@ describe('<Block />', () => {
       version: '2.19.0',
     };
 
-    const CustomRenderCode: RenderFn<{
-      code: string | number
-      lang: "text/javascript" | "text/typescript"
-    }> = ({ data: d, className }) => (
-      <div>
-        <pre>
-          {d?.code && (
-            <code lang={d.lang} className={className}>{`${d.code}`}</code>
-          )}
-        </pre>
-        <p>Warning: do not run this code in production</p>
-      </div>
-    )
-
-    const CustomRenderHeader = ({
-      data: d,
-      className,
-    }: {
-      data: {[s:string]: any},
-      className?: string
-    }) => (
-      <h1></h1>
-    )
-
-    const renderers: RenderersProp = {
-      code: CustomRenderCode,
-      header: CustomRenderHeader,
-    }
-
     it('uses the provided renderer for the specified block', () => {
+      const CustomRenderCode: RenderFn<{
+        code: string | number
+        lang: "text/javascript" | "text/typescript"
+      }> = ({ data: d, className }) => (
+        <div>
+          <pre>
+            {d?.code && (
+              <code lang={d.lang} className={className}>{`${d.code}`}</code>
+            )}
+          </pre>
+          <p>Warning: do not run this code in production</p>
+        </div>
+      )
+
+      const renderers: RenderersProp = {
+        code: CustomRenderCode,
+      }
+
       expect(create(<Blocks data={data} renderers={renderers} />).toJSON()).toMatchSnapshot();
     });
 
     it('must maintan backward compatibility with 0.1.x format', () => {
+      const CustomRenderHeader = ({
+        data: d,
+        className,
+      }: {
+        data: { [s: string]: any },
+        className?: string
+      }) => {
+        const Tag = `h${d?.level || 1}` as keyof JSX.IntrinsicElements;
+
+        return (
+          <Tag className={className}>{d.text}</Tag>
+        )
+      }
+
+      const renderers: RenderersProp = {
+        header: CustomRenderHeader,
+      }
+
       expect(create(<Blocks data={data} renderers={renderers} />).toJSON()).toMatchSnapshot();
     });
   });
