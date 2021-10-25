@@ -2,8 +2,9 @@
 
 Renders Editor.js blocks to semantic React HTML5 components. Unnopinated and flexible.
 
-[![](https://flat.badgen.net/npm/v/editorjs-blocks-react-renderer?icon=npm)](https://www.npmjs.com/package/editorjs-blocks-react-renderer)
+[![](https://flat.badgen.net/npm/v/editorjs-blocks-react-renderer)](https://www.npmjs.com/package/editorjs-blocks-react-renderer)
 [![](https://flat.badgen.net/npm/license/editorjs-blocks-react-renderer)](https://www.npmjs.com/package/editorjs-blocks-react-renderer)
+[![](https://flat.badgen.net/npm/types/editorjs-blocks-react-renderer)](https://www.npmjs.com/package/editorjs-blocks-react-renderer)
 
 An unnopinated React library that renders flexible HTML5 React components from [Editor.js](https://editorjs.io/) block style data.
 
