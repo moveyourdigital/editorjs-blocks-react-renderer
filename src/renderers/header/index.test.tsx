@@ -13,4 +13,15 @@ describe('<Header />', () => {
       expect(create(<Header data={data} />).toJSON()).toMatchSnapshot();
     });
   });
+
+  describe('when receives a header block with className', () => {
+    const data: HeaderBlockData = {
+      text: 'Editor.js',
+      level: 2,
+    };
+
+    it('renders a <h2 className>', () => {
+      expect(create(<Header data={data} className={"header-block"} />).toJSON()).toMatchSnapshot();
+    });
+  });
 });
