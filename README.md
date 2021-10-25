@@ -34,12 +34,12 @@ Blocks are independent and you can import only a set of them and use them diretl
 ```jsx
 import { Header } from 'editorjs-react-renderer';
 
-const dataHeader = {
-  "text": "Heading 2",
-  "level": 2
+const dataHeader: HeaderBlockData = {
+  text: "Heading 2",
+  level: 2
 }
 
-export const Heading () => <Header data={dataHeader} />;
+export const Heading () => <Header data={dataHeader} className="text-xl" />;
 ```
 
 ## Internal blocks
@@ -144,17 +144,16 @@ So, in theory, any CSS framework (such as Bootstrap) can work seamlessly with th
 You can provide your own custom renderers or replace the default ones by passing a `renderers` object to the `Blocks`.
 
 ```tsx
-const Checklist = ({
+const Checklist: RenderFn<{
+  items: string[]
+}> = ({
   data, className = ""
-}: {
-  data: {[s:string]: any}
-  className?: string
 }) => {
 
   return (
     <>
       {data?.items.map((item, i) => (
-        <p key={i}>
+        <p key={i} className={className}>
           <label>
             <input type="checkbox" /> {HTMLReactParser(item)}
           </label>

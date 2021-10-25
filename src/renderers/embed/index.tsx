@@ -1,5 +1,6 @@
 import React from 'react';
 import HTMLReactParser from 'html-react-parser';
+import { RenderFn } from '../..';
 
 export interface EmbedBlockData {
   service: string;
@@ -10,20 +11,20 @@ export interface EmbedBlockData {
   caption?: string;
 }
 
-const Embed = ({
+export interface EmbedBlockConfig {
+  rel?: string;
+  sandbox?: string | null;
+}
+
+const Embed: RenderFn<EmbedBlockData, EmbedBlockConfig> = ({
   data,
   className = '',
   rel = 'noreferer nofollower external',
   sandbox,
-}: {
-  data: EmbedBlockData;
-  className?: string;
-  rel?: string;
-  sandbox?: string | null;
 }) => {
   const classNames: string[] = [];
   if (className) classNames.push(className);
-  classNames.push(`embed-block-service-${data.service}`);
+  classNames.push(`embed-block-service-${data?.service}`);
 
   const figureprops: {
     [s: string]: string;
@@ -33,11 +34,11 @@ const Embed = ({
     figureprops.className = classNames.join(' ');
   }
 
-  if (data.width) {
+  if (data?.width) {
     figureprops.width = data.width.toString();
   }
 
-  if (data.height) {
+  if (data?.height) {
     figureprops.height = data.height.toString();
   }
 
@@ -47,14 +48,14 @@ const Embed = ({
 
   return (
     <figure>
-      {data.embed ? (
+      {data?.embed ? (
         <iframe src={data.embed} {...figureprops} frameBorder="0" data-src={data.source}></iframe>
       ) : (
-        <a href={data.source} target="_blank" rel={rel}>
-          {data.source}
+        <a href={data?.source} target="_blank" rel={rel}>
+          {data?.source}
         </a>
       )}
-      {data.caption && <figcaption>{HTMLReactParser(data.caption)}</figcaption>}
+      {data?.caption && <figcaption>{HTMLReactParser(data.caption)}</figcaption>}
     </figure>
   );
 };

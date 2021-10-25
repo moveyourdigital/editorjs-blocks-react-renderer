@@ -1,12 +1,13 @@
 import React from 'react';
 import HTMLReactParser from 'html-react-parser';
+import { RenderFn } from '../..';
 
 export interface HeaderBlockData {
   text: string;
   level: number;
 }
 
-const Header = ({ data, className = '' }: { data: HeaderBlockData; className?: string }) => {
+const Header: RenderFn<HeaderBlockData> = ({ data, className = '' }) => {
   const props: {
     [s: string]: string;
   } = {};
@@ -15,7 +16,7 @@ const Header = ({ data, className = '' }: { data: HeaderBlockData; className?: s
     props.className = className;
   }
 
-  const Tag = `h${data.level || 1}` as keyof JSX.IntrinsicElements;
+  const Tag = `h${data?.level || 1}` as keyof JSX.IntrinsicElements;
   return <Tag {...props}>{data?.text && HTMLReactParser(data.text)}</Tag>;
 };
 

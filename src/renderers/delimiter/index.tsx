@@ -1,6 +1,7 @@
 import React from 'react';
+import { RenderFnWithoutData } from '../..';
 
-const Delimiter = ({ className = '' }: { className?: string }) => {
+const Delimiter: RenderFnWithoutData = ({ className = '' }) => {
   const props: {
     [s: string]: string;
   } = {};

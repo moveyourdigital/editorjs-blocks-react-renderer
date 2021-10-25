@@ -1,5 +1,6 @@
 import React from 'react';
 import HTMLReactParser from 'html-react-parser';
+import { RenderFn } from '../..';
 
 export interface TableBlockData {
   content: string[][];
@@ -8,7 +9,7 @@ export interface TableBlockData {
   caption?: string;
 }
 
-const Table = ({ data, className = '' }: { data: TableBlockData; className?: string }) => {
+const Table: RenderFn<TableBlockData> = ({ data, className = '' }) => {
   const tableprops: {
     [s: string]: string;
   } = {};
@@ -19,8 +20,8 @@ const Table = ({ data, className = '' }: { data: TableBlockData; className?: str
 
   return (
     <table {...tableprops}>
-      {data.caption && <caption>{HTMLReactParser(data.caption)}</caption>}
-      {data.header && (
+      {data?.caption && <caption>{HTMLReactParser(data.caption)}</caption>}
+      {data?.header && (
         <thead>
           <tr>
             {data.header.map((cell, i) => (
@@ -30,7 +31,7 @@ const Table = ({ data, className = '' }: { data: TableBlockData; className?: str
         </thead>
       )}
       <tbody>
-        {data.content.map((row, i) => (
+        {data?.content.map((row, i) => (
           <tr key={`${i}`}>
             {row.map((cell, j) => {
               const Tag = `t${j === 0 ? 'h' : 'd'}` as keyof JSX.IntrinsicElements;
@@ -39,7 +40,7 @@ const Table = ({ data, className = '' }: { data: TableBlockData; className?: str
           </tr>
         ))}
       </tbody>
-      {data.header && (
+      {data?.header && (
         <tfoot>
           <tr>
             {data.header.map((cell, i) => (

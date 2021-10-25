@@ -1,5 +1,6 @@
 import React from 'react';
 import HTMLReactParser from 'html-react-parser';
+import { RenderFn } from '../..';
 
 export interface QuoteBlockData {
   text: string;
@@ -7,22 +8,22 @@ export interface QuoteBlockData {
   alignment?: 'left' | 'center';
 }
 
-const Quote = ({
+export interface QuoteBlockConfig {
+  actionsClassNames?: {
+    [s: string]: string;
+  }
+}
+
+const Quote: RenderFn<QuoteBlockData, QuoteBlockConfig> = ({
   data,
   className = '',
   actionsClassNames = {
     alignment: 'text-align-{alignment}',
   },
-}: {
-  data: QuoteBlockData;
-  className?: string;
-  actionsClassNames?: {
-    [s: string]: string;
-  };
 }) => {
   const classNames: string[] = [];
 
-  if (data.alignment) {
+  if (data?.alignment) {
     classNames.push(actionsClassNames.alignment.replace('{alignment}', data.alignment));
   }
 
@@ -38,7 +39,7 @@ const Quote = ({
 
   return (
     <blockquote {...blockquoteprops}>
-      {data.text &&
+      {data?.text &&
         data.text
           .split('\n\n')
           .map((paragraph, i) => (
@@ -46,7 +47,7 @@ const Quote = ({
               {HTMLReactParser(paragraph.split('\n').reduce((total, line) => [total, '<br />', line].join('')))}
             </p>
           ))}
-      {data.caption && <footer>{HTMLReactParser(data.caption)}</footer>}
+      {data?.caption && <footer>{HTMLReactParser(data.caption)}</footer>}
     </blockquote>
   );
 };

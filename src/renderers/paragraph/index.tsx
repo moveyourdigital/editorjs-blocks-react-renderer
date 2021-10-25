@@ -1,11 +1,12 @@
 import React from 'react';
 import HTMLReactParser from 'html-react-parser';
+import { RenderFn } from '../..';
 
 export interface ParagraphBlockData {
   text: string;
 }
 
-const Paragraph = ({ data, className = '' }: { data: ParagraphBlockData; className?: string }) => {
+const Paragraph: RenderFn<ParagraphBlockData> = ({ data, className = '' }) => {
   const props: {
     [s: string]: string;
   } = {};
