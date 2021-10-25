@@ -1,5 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Table /> when receives a simple table renders a <table> tag without <thead>, <tfoot> or <caption> 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <th>
+        Kine
+      </th>
+      <td>
+        1 pcs
+      </td>
+      <td>
+        100$
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Pigs
+      </th>
+      <td>
+        3 pcs
+      </td>
+      <td>
+        200$
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Chickens
+      </th>
+      <td>
+        12 pcs
+      </td>
+      <td>
+        150$
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`<Table /> when receives a table block renders a <table> tag 1`] = `
 <table>
   <caption>
@@ -56,6 +96,27 @@ exports[`<Table /> when receives a table block renders a <table> tag 1`] = `
   <tfoot>
     <tr>
       <th>
+        Total
+      </th>
+      <th>
+        16 pcs
+      </th>
+      <th>
+        $450
+      </th>
+    </tr>
+  </tfoot>
+</table>
+`;
+
+exports[`<Table /> when receives a table block without footer renders a <table> tag without <tfoot> 1`] = `
+<table>
+  <caption>
+    The stock on our store.
+  </caption>
+  <thead>
+    <tr>
+      <th>
         Name
       </th>
       <th>
@@ -65,6 +126,41 @@ exports[`<Table /> when receives a table block renders a <table> tag 1`] = `
         Price
       </th>
     </tr>
-  </tfoot>
+  </thead>
+  <tbody>
+    <tr>
+      <th>
+        Kine
+      </th>
+      <td>
+        1 pcs
+      </td>
+      <td>
+        100$
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Pigs
+      </th>
+      <td>
+        3 pcs
+      </td>
+      <td>
+        200$
+      </td>
+    </tr>
+    <tr>
+      <th>
+        Chickens
+      </th>
+      <td>
+        12 pcs
+      </td>
+      <td>
+        150$
+      </td>
+    </tr>
+  </tbody>
 </table>
 `;
