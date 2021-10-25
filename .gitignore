@@ -104,3 +104,6 @@ typings/
 
 # MacOS
 .DS_Store
+
+# Distribution
+dist/
