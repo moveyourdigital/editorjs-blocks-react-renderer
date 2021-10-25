@@ -29,6 +29,7 @@ export type RenderFnWithoutData<K = Record<string, any> | undefined> = (
 export type RenderersProp = Record<string, RenderFn<any>>;
 
 export interface Block {
+  id?: string;
   type: string;
   data: Record<string, any>;
 }
@@ -65,13 +66,15 @@ const Blocks = ({
     ...renderers,
   };
 
+  const hasBlockId = data.version.includes('2.21');
+
   return (
     <>
       {data.blocks.map((block, i) => {
         if (block.type.toString() in availableRenderers) {
           // @ts-ignore Todo: find a fix
           const Tag = availableRenderers[block.type];
-          return <Tag key={i} data={block.data} {...config[block.type]} />;
+          return <Tag key={hasBlockId && block.id ? block.id : i} data={block.data} {...config[block.type]} />;
         }
       })}
     </>

@@ -54,7 +54,149 @@ Array [
 ]
 `;
 
-exports[`<Block /> when receives an EditorJS blocks data renders all known block tags 1`] = `
+exports[`<Block /> when receives an EditorJS 2.19 blocks data renders all known block tags 1`] = `
+Array [
+  <p>
+    Mollit deserunt culpa fugiat ea do laboris minim ex do. Elit cillum qui aute sint irure aliqua excepteur minim. Eiusmod velit cupidatat ea culpa magna magna id consectetur enim irure ex excepteur tempor quis. Veniam incididunt ullamco adipisicing dolor ex proident ex amet dolor. Nisi in adipisicing non quis id Lorem consectetur.
+  </p>,
+  <p>
+    Nulla pariatur proident cillum consequat cupidatat ex reprehenderit nisi quis mollit laboris dolore ex. Laborum sint duis elit proident. Aliquip id mollit commodo excepteur.
+  </p>,
+  <h3>
+    Quis consectetur nostrud eu officia aute laborum labore nulla?
+  </h3>,
+  <p>
+    Non pariatur deserunt elit proident. Reprehenderit cupidatat velit veniam ut pariatur minim culpa in ex commodo do sint magna cillum. Eiusmod enim officia et ipsum exercitation veniam veniam ad minim ad minim. Eiusmod dolore dolor minim magna velit officia ut est occaecat magna in.
+  </p>,
+  <h4>
+    Do laboris magna quis nisi consequat!
+  </h4>,
+  <p>
+    Sunt elit labore consequat proident ullamco minim cupidatat. Exercitation reprehenderit ut ad irure eiusmod proident. Culpa culpa nulla eiusmod reprehenderit est officia Lorem id. Aliqua non commodo sint sunt ex nulla. Nulla esse irure eiusmod dolor nisi aliqua do cillum dolor amet officia. Veniam aliqua aliquip eu voluptate commodo sint ut. Sit nostrud Lorem aliquip ex culpa irure nulla deserunt consequat nulla ea velit in.
+  </p>,
+  <figure
+    className="image-block--with-background"
+  >
+    <img
+      alt="Deep in the universe"
+      src="https://cdn.directions.pt/uploads/2020/08/681-2000x1300-2.jpg"
+    />
+    <figcaption>
+      Deep in the universe
+    </figcaption>
+  </figure>,
+  <blockquote
+    className="text-align-center"
+  >
+    <p>
+      Esse ea consectetur est fugiat ut dolor pariatur ex voluptate ad Lorem Lorem sit sunt. Eiusmod voluptate ullamco laborum minim elit. Cillum ullamco fugiat tempor dolore enim. Excepteur exercitation amet aliqua proident labore qui sint do dolore sint nulla aute.
+    </p>
+    <footer>
+      Carpe Diem
+    </footer>
+  </blockquote>,
+  <hr />,
+  <ol>
+    <li>
+      Reprehenderit fugiat proident eiusmod proident.
+    </li>
+    <li>
+      Velit enim duis fugiat excepteur.
+    </li>
+    <li>
+      Qui incididunt nostrud ipsum in officia cillum esse officia incididunt id consequat quis.
+    </li>
+    <li>
+      Fugiat quis qui sit velit sit tempor.
+    </li>
+    <li>
+      Tempor sit aute eiusmod reprehenderit irure ea laborum.
+    </li>
+    <li>
+      Sit do do cillum sit quis. Culpa adipisicing sunt nostrud ad labore enim.
+    </li>
+  </ol>,
+  <figure>
+    <iframe
+      className="embed-block-service-youtube"
+      data-src="https://www.youtube.com/watch?v=yDiD8F9ItX0"
+      frameBorder="0"
+      height="320"
+      src="https://www.youtube.com/embed/yDiD8F9ItX0"
+      width="580"
+    />
+    
+  </figure>,
+  <table>
+    <caption>
+      The stock on our store.
+    </caption>
+    <thead>
+      <tr>
+        <th>
+          Name
+        </th>
+        <th>
+          Qtd
+        </th>
+        <th>
+          Price
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          Kine
+        </th>
+        <td>
+          1 pcs
+        </td>
+        <td>
+          100$
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Pigs
+        </th>
+        <td>
+          3 pcs
+        </td>
+        <td>
+          200$
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Chickens
+        </th>
+        <td>
+          12 pcs
+        </td>
+        <td>
+          150$
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>
+          Total
+        </th>
+        <th>
+          16 pcs
+        </th>
+        <th>
+          $450
+        </th>
+      </tr>
+    </tfoot>
+  </table>,
+]
+`;
+
+exports[`<Block /> when receives an EditorJS 2.21 blocks data renders all known block tags 1`] = `
 Array [
   <p>
     Mollit deserunt culpa fugiat ea do laboris minim ex do. Elit cillum qui aute sint irure aliqua excepteur minim. Eiusmod velit cupidatat ea culpa magna magna id consectetur enim irure ex excepteur tempor quis. Veniam incididunt ullamco adipisicing dolor ex proident ex amet dolor. Nisi in adipisicing non quis id Lorem consectetur.
