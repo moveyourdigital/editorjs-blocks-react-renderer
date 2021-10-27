@@ -49,4 +49,24 @@ describe('<Table />', () => {
       expect(create(<Table data={data} />).toJSON()).toMatchSnapshot();
     });
   });
+
+  describe('when receives a table 2.20 format', () => {
+    describe.each([
+      [true, 'renders a <table> tag without <tfoot> or <caption>'],
+      [false, 'renders a <table> tag without <thead>, <tfoot> or <caption>'],
+    ])('withHeadings = %p', (withHeadings, display) => {
+      const data: TableBlockData = {
+        withHeadings,
+        content: [
+          ['Kine', 'Pigs', 'Chicken'],
+          ['1 pcs', '3 pcs', '12 pcs'],
+          ['100$', '200$', '150$'],
+        ],
+      };
+
+      it(display, () => {
+        expect(create(<Table data={data} />).toJSON()).toMatchSnapshot();
+      });
+    });
+  });
 });

@@ -2,14 +2,11 @@
 
 exports[`<Table /> when receives a simple table renders a <table> tag without <thead>, <tfoot> or <caption> 1`] = `
 <table>
-  
   <tbody>
     <tr>
-      <th
-        scope="row"
-      >
+      <td>
         Kine
-      </th>
+      </td>
       <td>
         1 pcs
       </td>
@@ -18,11 +15,9 @@ exports[`<Table /> when receives a simple table renders a <table> tag without <t
       </td>
     </tr>
     <tr>
-      <th
-        scope="row"
-      >
+      <td>
         Pigs
-      </th>
+      </td>
       <td>
         3 pcs
       </td>
@@ -31,13 +26,99 @@ exports[`<Table /> when receives a simple table renders a <table> tag without <t
       </td>
     </tr>
     <tr>
-      <th
-        scope="row"
-      >
+      <td>
         Chickens
-      </th>
+      </td>
       <td>
         12 pcs
+      </td>
+      <td>
+        150$
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<Table /> when receives a table 2.20 format withHeadings = false renders a <table> tag without <thead>, <tfoot> or <caption> 1`] = `
+<table>
+  <tbody>
+    <tr>
+      <td>
+        Kine
+      </td>
+      <td>
+        Pigs
+      </td>
+      <td>
+        Chicken
+      </td>
+    </tr>
+    <tr>
+      <td>
+        1 pcs
+      </td>
+      <td>
+        3 pcs
+      </td>
+      <td>
+        12 pcs
+      </td>
+    </tr>
+    <tr>
+      <td>
+        100$
+      </td>
+      <td>
+        200$
+      </td>
+      <td>
+        150$
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`<Table /> when receives a table 2.20 format withHeadings = true renders a <table> tag without <tfoot> or <caption> 1`] = `
+<table>
+  <thead>
+    <tr>
+      <th
+        scope="col"
+      >
+        Kine
+      </th>
+      <th
+        scope="col"
+      >
+        Pigs
+      </th>
+      <th
+        scope="col"
+      >
+        Chicken
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        1 pcs
+      </td>
+      <td>
+        3 pcs
+      </td>
+      <td>
+        12 pcs
+      </td>
+    </tr>
+    <tr>
+      <td>
+        100$
+      </td>
+      <td>
+        200$
       </td>
       <td>
         150$
@@ -71,7 +152,6 @@ exports[`<Table /> when receives a table block renders a <table> tag 1`] = `
       </th>
     </tr>
   </thead>
-  
   <tbody>
     <tr>
       <th
@@ -155,7 +235,6 @@ exports[`<Table /> when receives a table block without footer renders a <table> 
       </th>
     </tr>
   </thead>
-  
   <tbody>
     <tr>
       <th
