@@ -133,20 +133,29 @@ Array [
     </caption>
     <thead>
       <tr>
-        <th>
+        <th
+          scope="col"
+        >
           Name
         </th>
-        <th>
+        <th
+          scope="col"
+        >
           Qtd
         </th>
-        <th>
+        <th
+          scope="col"
+        >
           Price
         </th>
       </tr>
     </thead>
+    
     <tbody>
       <tr>
-        <th>
+        <th
+          scope="row"
+        >
           Kine
         </th>
         <td>
@@ -157,7 +166,9 @@ Array [
         </td>
       </tr>
       <tr>
-        <th>
+        <th
+          scope="row"
+        >
           Pigs
         </th>
         <td>
@@ -168,7 +179,9 @@ Array [
         </td>
       </tr>
       <tr>
-        <th>
+        <th
+          scope="row"
+        >
           Chickens
         </th>
         <td>
@@ -181,15 +194,17 @@ Array [
     </tbody>
     <tfoot>
       <tr>
-        <th>
+        <th
+          scope="row"
+        >
           Total
         </th>
-        <th>
+        <td>
           16 pcs
-        </th>
-        <th>
+        </td>
+        <td>
           $450
-        </th>
+        </td>
       </tr>
     </tfoot>
   </table>,
@@ -275,20 +290,29 @@ Array [
     </caption>
     <thead>
       <tr>
-        <th>
+        <th
+          scope="col"
+        >
           Name
         </th>
-        <th>
+        <th
+          scope="col"
+        >
           Qtd
         </th>
-        <th>
+        <th
+          scope="col"
+        >
           Price
         </th>
       </tr>
     </thead>
+    
     <tbody>
       <tr>
-        <th>
+        <th
+          scope="row"
+        >
           Kine
         </th>
         <td>
@@ -299,7 +323,9 @@ Array [
         </td>
       </tr>
       <tr>
-        <th>
+        <th
+          scope="row"
+        >
           Pigs
         </th>
         <td>
@@ -310,7 +336,9 @@ Array [
         </td>
       </tr>
       <tr>
-        <th>
+        <th
+          scope="row"
+        >
           Chickens
         </th>
         <td>
@@ -323,15 +351,17 @@ Array [
     </tbody>
     <tfoot>
       <tr>
-        <th>
+        <th
+          scope="row"
+        >
           Total
         </th>
-        <th>
+        <td>
           16 pcs
-        </th>
-        <th>
+        </td>
+        <td>
           $450
-        </th>
+        </td>
       </tr>
     </tfoot>
   </table>,
