@@ -7,7 +7,7 @@ export interface ImageBlockData {
     url: string;
     name?: string;
   };
-  url?: string
+  url?: string;
   caption: string;
   withBorder: boolean;
   withBackground: boolean;

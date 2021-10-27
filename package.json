@@ -1,7 +1,7 @@
 {
   "name": "editorjs-blocks-react-renderer",
-  "version": "1.2.0",
-  "description": "EditorJS blocks renderer to semanticly beautiful html5 tags via React.",
+  "version": "1.2.1",
+  "description": "EditorJS blocks render to semanticly beautiful html5 tags via React.",
   "keywords": [
     "editorjs",
     "editor.js",
@@ -13,6 +13,7 @@
     "gatsby",
     "renderer",
     "html5",
+    "html",
     "blocks"
   ],
   "main": "dist/index.js",
