@@ -3,10 +3,11 @@ import HTMLReactParser from 'html-react-parser';
 import { RenderFn } from '../..';
 
 export interface ImageBlockData {
-  file: {
+  file?: {
     url: string;
     name?: string;
   };
+  url?: string
   caption: string;
   withBorder: boolean;
   withBackground: boolean;
@@ -50,6 +51,7 @@ const Image: RenderFn<ImageBlockData, ImageBlockConfig> = ({
   return (
     <figure {...figureprops}>
       {data?.file?.url && <img src={data.file.url} alt={data.caption || data.file.name} />}
+      {data?.url && <img src={data.url} alt={data.caption} />}
       {data?.caption && <figcaption>{HTMLReactParser(data.caption)}</figcaption>}
     </figure>
   );

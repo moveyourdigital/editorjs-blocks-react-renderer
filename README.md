@@ -50,6 +50,7 @@ The package ships with the following renderers, but you can include your custom 
 - Header
 - Paragraph
 - Image
+- SimpleImage
 - Embed
 - List
 - Table
