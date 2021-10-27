@@ -1,12 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<List /> when receives a list ordered block renders a <ol> block 1`] = `
+exports[`<List /> when receives a list "ordered" block renders a <ol> block 1`] = `
 <ol>
   <li>
     It is a block-styled editor
   </li>
   <li>
-    It returns clean data output in JSON
+    It returns clean 
+    <b>
+      data output
+    </b>
+     in JSON
   </li>
   <li>
     Designed to be extendable and pluggable with a simple API
@@ -14,7 +18,7 @@ exports[`<List /> when receives a list ordered block renders a <ol> block 1`] = 
 </ol>
 `;
 
-exports[`<List /> when receives a list unordered block renders a <ul> block 1`] = `
+exports[`<List /> when receives a list "unordered" block renders a <ul> block 1`] = `
 <ul>
   <li>
     It is a block-styled editor
@@ -25,6 +29,210 @@ exports[`<List /> when receives a list unordered block renders a <ul> block 1`] 
       data output
     </b>
      in JSON
+  </li>
+  <li>
+    Designed to be extendable and pluggable with a simple API
+  </li>
+</ul>
+`;
+
+exports[`<List /> when receives a nested list "ordered" block and when className is provided renders className to all <ol> blocks 1`] = `
+<ol
+  className="list"
+>
+  <li>
+    It is a block-styled editor
+  </li>
+  <li>
+    It returns clean data output in JSON
+    <ol
+      className="list"
+    >
+      <li>
+        Designed to be extendable and pluggable with a simple API
+        <ol
+          className="list"
+        >
+          <li>
+            Red
+          </li>
+          <li>
+            Green
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>
+    It returns clean data output in JSON
+  </li>
+  <li>
+    Designed to be extendable and pluggable with a simple API
+  </li>
+</ol>
+`;
+
+exports[`<List /> when receives a nested list "ordered" block and when className is provided renders className to all <ol> blocks 2`] = `
+<ol
+  className="list-ul px-3 py-2"
+>
+  <li>
+    It is a block-styled editor
+  </li>
+  <li>
+    It returns clean data output in JSON
+    <ol
+      className="list-ul px-3 py-2"
+    >
+      <li>
+        Designed to be extendable and pluggable with a simple API
+        <ol
+          className="list-ul px-3 py-2"
+        >
+          <li>
+            Red
+          </li>
+          <li>
+            Green
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>
+    It returns clean data output in JSON
+  </li>
+  <li>
+    Designed to be extendable and pluggable with a simple API
+  </li>
+</ol>
+`;
+
+exports[`<List /> when receives a nested list "ordered" block renders a <ol> block 1`] = `
+<ol>
+  <li>
+    It is a block-styled editor
+  </li>
+  <li>
+    It returns clean data output in JSON
+    <ol>
+      <li>
+        Designed to be extendable and pluggable with a simple API
+        <ol>
+          <li>
+            Red
+          </li>
+          <li>
+            Green
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>
+    It returns clean data output in JSON
+  </li>
+  <li>
+    Designed to be extendable and pluggable with a simple API
+  </li>
+</ol>
+`;
+
+exports[`<List /> when receives a nested list "unordered" block and when className is provided renders className to all <ul> blocks 1`] = `
+<ul
+  className="list"
+>
+  <li>
+    It is a block-styled editor
+  </li>
+  <li>
+    It returns clean data output in JSON
+    <ul
+      className="list"
+    >
+      <li>
+        Designed to be extendable and pluggable with a simple API
+        <ul
+          className="list"
+        >
+          <li>
+            Red
+          </li>
+          <li>
+            Green
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    It returns clean data output in JSON
+  </li>
+  <li>
+    Designed to be extendable and pluggable with a simple API
+  </li>
+</ul>
+`;
+
+exports[`<List /> when receives a nested list "unordered" block and when className is provided renders className to all <ul> blocks 2`] = `
+<ul
+  className="list-ul px-3 py-2"
+>
+  <li>
+    It is a block-styled editor
+  </li>
+  <li>
+    It returns clean data output in JSON
+    <ul
+      className="list-ul px-3 py-2"
+    >
+      <li>
+        Designed to be extendable and pluggable with a simple API
+        <ul
+          className="list-ul px-3 py-2"
+        >
+          <li>
+            Red
+          </li>
+          <li>
+            Green
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    It returns clean data output in JSON
+  </li>
+  <li>
+    Designed to be extendable and pluggable with a simple API
+  </li>
+</ul>
+`;
+
+exports[`<List /> when receives a nested list "unordered" block renders a <ul> block 1`] = `
+<ul>
+  <li>
+    It is a block-styled editor
+  </li>
+  <li>
+    It returns clean data output in JSON
+    <ul>
+      <li>
+        Designed to be extendable and pluggable with a simple API
+        <ul>
+          <li>
+            Red
+          </li>
+          <li>
+            Green
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    It returns clean data output in JSON
   </li>
   <li>
     Designed to be extendable and pluggable with a simple API

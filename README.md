@@ -53,6 +53,7 @@ The package ships with the following renderers, but you can include your custom 
 - SimpleImage
 - Embed
 - List
+- NestedList
 - Table
 - Quote
 - Delimiter
