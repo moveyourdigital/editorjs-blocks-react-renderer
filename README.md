@@ -57,6 +57,7 @@ The package ships with the following renderers, but you can include your custom 
 - Table
 - Quote
 - Delimiter
+- Raw (HTML)
 
 ## Styling and optional configs
 

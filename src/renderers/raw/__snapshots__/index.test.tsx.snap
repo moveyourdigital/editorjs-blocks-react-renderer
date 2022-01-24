@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Raw /> when receives a raw block renders content as HTML 1`] = `
+<div
+  style={
+    Object {
+      "background": "#000",
+      "color": "#fff",
+      "fontSize": "30px",
+      "padding": "50px",
+    }
+  }
+>
+  Any HTML code
+</div>
+`;

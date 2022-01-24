@@ -7,6 +7,7 @@ import Image from './renderers/image';
 import List from './renderers/list';
 import Paragraph from './renderers/paragraph';
 import Quote from './renderers/quote';
+import Raw from './renderers/raw';
 import Table from './renderers/table';
 
 export type ConfigProp = Record<string, RenderConfig>;
@@ -59,6 +60,7 @@ const Blocks = ({
     paragraph: Paragraph,
     quote: Quote,
     table: Table,
+    raw: Raw,
   };
 
   const availableRenderers = {
@@ -92,4 +94,5 @@ export {
   Paragraph as ParagraphBlock,
   Quote as QuoteBlock,
   Table as TableBlock,
+  Raw as RawBlock,
 };
