@@ -59,7 +59,7 @@
     "typescript": "^4.5.2"
   },
   "dependencies": {
-    "html-react-parser": "^1.4.5"
+    "html-react-parser": "^1.4.6"
   },
   "peerDependencies": {
     "react": ">=16",
