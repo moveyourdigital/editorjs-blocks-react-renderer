@@ -16,6 +16,7 @@ export interface ImageBlockData {
 }
 
 export interface ImageBlockConfig {
+  fileBaseHref?: string;
   actionsClassNames?: {
     [s: string]: string;
   };
@@ -23,6 +24,7 @@ export interface ImageBlockConfig {
 
 const Image: RenderFn<ImageBlockData, ImageBlockConfig> = ({
   data,
+  fileBaseHref = null,
   className = '',
   actionsClassNames = {
     stretched: 'image-block--stretched',
@@ -50,7 +52,7 @@ const Image: RenderFn<ImageBlockData, ImageBlockConfig> = ({
 
   return (
     <figure {...figureprops}>
-      {data?.file?.url && <img src={data.file.url} alt={data.caption || data.file.name} />}
+      {data?.file?.url && <img src={fileBaseHref ? fileBaseHref + data.file.url : data.file.url} alt={data.caption || data.file.name} />}
       {data?.url && <img src={data.url} alt={data.caption} />}
       {data?.caption && <figcaption>{HTMLReactParser(data.caption)}</figcaption>}
     </figure>
