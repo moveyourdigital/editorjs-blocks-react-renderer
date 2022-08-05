@@ -1,12 +1,16 @@
 ### Purpose
 
-- [ ] New feature
-- [ ] New renderer
-- [ ] Bug fix
-- [ ] Documentation
-- [ ] Refactoring
-- [ ] Test Case
-- [ ] Other
+<!--
+Remove if not applicable
+-->
+
+- New feature
+- New renderer
+- Bug fix
+- Documentation
+- Refactoring
+- Test Case
+- Other
 
 ### Description
 
