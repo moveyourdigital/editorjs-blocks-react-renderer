@@ -7,6 +7,7 @@ function App() {
     time: 1610632160642,
     blocks: [
       {
+        id: '_32hejeTfv',
         type: 'image',
         data: {
           file: {
@@ -22,19 +23,21 @@ function App() {
         },
       },
       {
+        id: 'xnDhLWRMRC',
         type: 'paragraph',
         data: {
           text: 'Edit <code>src/App.js</code> and save to reload.',
         },
       },
       {
+        id: 'mCXb0uDFkJ',
         type: 'paragraph',
         data: {
           text: '<a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a>',
         },
       },
     ],
-    version: '2.19.0',
+    version: '2.25.0',
   };
 
   return (
