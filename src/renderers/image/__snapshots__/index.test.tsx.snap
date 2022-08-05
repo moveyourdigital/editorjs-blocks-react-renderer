@@ -29,6 +29,18 @@ exports[`<Image /> when receives a Image block without actions renders a <figure
 </figure>
 `;
 
+exports[`<Image /> when receives a Image block without name renders a <figure> block with <img> and <figcaption> 1`] = `
+<figure>
+  <img
+    alt="Deep in the universe"
+    src="https://cdn.directions.pt/uploads/2020/08/681-2000x1300-2.jpg"
+  />
+  <figcaption>
+    Deep in the universe
+  </figcaption>
+</figure>
+`;
+
 exports[`<Image /> when receives a SimpleImage block renders a <figure> block with <img> and <figcaption> 1`] = `
 <figure>
   <img
