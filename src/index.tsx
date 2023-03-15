@@ -68,7 +68,7 @@ const Blocks = ({
     ...renderers,
   };
 
-  const hasBlockId = data.version.includes('2.21');
+  const hasBlockId = data.version?.includes('2.21');
 
   return (
     <>
