@@ -66,4 +66,27 @@ describe('<Image />', () => {
       expect(create(<Image data={data} />).toJSON()).toMatchSnapshot();
     });
   });
+
+
+
+  describe('when receives a Image block', () => {
+    const data: ImageBlockData = {
+      file: {
+        url: '/uploads/2020/08/681-2000x1300-2.jpg',
+        name: '681-2000x1300-2',
+      },
+      caption: 'Deep in the universe',
+      withBorder: false,
+      stretched: false,
+      withBackground: false,
+    };
+
+    it('renders with file base href', () => {
+      expect(create(<Image data={data} fileBaseHref={'https://google.com'} />).toJSON()).toMatchSnapshot();
+    });
+
+    it('renders without file base href', () => {
+      expect(create(<Image data={data} />).toJSON()).toMatchSnapshot();
+    });
+  });
 });
