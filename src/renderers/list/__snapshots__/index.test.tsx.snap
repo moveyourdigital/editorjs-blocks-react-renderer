@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<List /> backward compatibility renders ordered list without meta property (default behavior) 1`] = `
+<ol>
+  <li>
+    Item without meta
+  </li>
+  <li>
+    Another item
+  </li>
+</ol>
+`;
+
+exports[`<List /> backward compatibility renders unordered list without meta property 1`] = `
+<ul>
+  <li>
+    Bullet item
+  </li>
+  <li>
+    Another bullet
+  </li>
+</ul>
+`;
+
 exports[`<List /> when receives a list "ordered" block renders a <ol> block 1`] = `
 <ol>
   <li>
@@ -34,6 +56,137 @@ exports[`<List /> when receives a list "unordered" block renders a <ul> block 1`
     Designed to be extendable and pluggable with a simple API
   </li>
 </ul>
+`;
+
+exports[`<List /> when receives a list with meta property with custom start value renders an <ol> block with start attribute 1`] = `
+<ol
+  start={5}
+>
+  <li>
+    First item
+  </li>
+  <li>
+    Second item
+  </li>
+  <li>
+    Third item
+  </li>
+</ol>
+`;
+
+exports[`<List /> when receives a list with meta property with lower-alpha counter type renders an <ol> block with lower-alpha list style 1`] = `
+<ol
+  style={
+    Object {
+      "listStyleType": "lower-alpha",
+    }
+  }
+>
+  <li>
+    First item
+  </li>
+  <li>
+    Second item
+  </li>
+  <li>
+    Third item
+  </li>
+</ol>
+`;
+
+exports[`<List /> when receives a list with meta property with lower-roman counter type renders an <ol> block with lower-roman list style 1`] = `
+<ol
+  style={
+    Object {
+      "listStyleType": "lower-roman",
+    }
+  }
+>
+  <li>
+    First item
+  </li>
+  <li>
+    Second item
+  </li>
+  <li>
+    Third item
+  </li>
+</ol>
+`;
+
+exports[`<List /> when receives a list with meta property with nested lists and meta properties renders nested <ol> blocks with inherited meta properties 1`] = `
+<ol
+  start={3}
+  style={
+    Object {
+      "listStyleType": "upper-roman",
+    }
+  }
+>
+  <li>
+    First level item 1
+  </li>
+  <li>
+    First level item 2
+    <ol
+      start={3}
+      style={
+        Object {
+          "listStyleType": "upper-roman",
+        }
+      }
+    >
+      <li>
+        Nested item 1
+      </li>
+      <li>
+        Nested item 2
+      </li>
+    </ol>
+  </li>
+</ol>
+`;
+
+exports[`<List /> when receives a list with meta property with upper-alpha counter type renders an <ol> block with upper-alpha list style and custom start 1`] = `
+<ol
+  start={2}
+  style={
+    Object {
+      "listStyleType": "upper-alpha",
+    }
+  }
+>
+  <li>
+    First item
+  </li>
+  <li>
+    Second item
+  </li>
+  <li>
+    Third item
+  </li>
+</ol>
+`;
+
+exports[`<List /> when receives a list with meta property with upper-roman counter type renders an <ol> block with upper-roman list style and custom start 1`] = `
+<ol
+  start={3}
+  style={
+    Object {
+      "listStyleType": "upper-roman",
+    }
+  }
+>
+  <li>
+    First item
+  </li>
+  <li>
+    Second item
+  </li>
+  <li>
+    Third item
+  </li>
+</ol>
 `;
 
 exports[`<List /> when receives a nested list "ordered" block and when className is provided renders className to all <ol> blocks 1`] = `
